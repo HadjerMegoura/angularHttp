@@ -1,27 +1,55 @@
-# AngularHttp
+# Angular To-Do List Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.14.
+A modern, interactive To-Do List application built with Angular, featuring a clean dashboard, task management, and real-time data persistence using Firebase.
 
-## Development server
+This project is a training exercise demonstrating key Angular concepts including component architecture, state management (via services), forms, Angular Material UI, and Firebase integration for data storage.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Features
 
-## Code scaffolding
+- **Dashboard** displaying a list of tasks with columns:
+  - Task name/title
+  - Assigned to (person)
+  - Due date
+  - Priority level (High / Medium / Low)
+  - State (started/ In progress..)
+- **Header actions**:
+  - **Add Task** → opens a popup dialog with form
+  - **Fetch Tasks** → reloads tasks from Firebase
+  - **Clear List** → removes all tasks 
+- **Task actions**:
+  - Delete task
+  - Update/Edit task (opens same form)
+  - Detail page (not implemented yet)
+- **Add/Edit Task Dialog** (Angular Material Dialog):
+  - Title (required)
+  - Description
+  - Assigned To
+  - Due Date (date picker)
+  - Priority (dropdown: High, Medium, Low)
+  - State (started/ In progress..)
+  - Create/Update button
+- Real-time data sync with **Firebase** (Realtime Database or Firestore)
+- Form validation
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
 
-## Build
+- Angular 18+ (standalone components)
+- Angular Material (tables, forms, datepicker, buttons, select, snackbar)
+- Firebase (Realtime Database / Firestore for CRUD operations)
+- TypeScript
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+## Installation & Run Locally
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+# Clone the repository
+git clone https://github.com/HadjerMegoura/angularHttp.git
 
-## Running end-to-end tests
+# Go to project directory
+cd todo-list-dashboard
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+# Install dependencies
+npm install
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+# Start development server
+ng serve
